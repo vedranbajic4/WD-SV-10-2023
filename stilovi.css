@@ -32,7 +32,6 @@ nav li{
     list-style-type: none;
 }
 .main{
-    border-top: 7px solid #6a6863;
     border-radius: 10px;
     background-color: white;
     width: 80%;
@@ -40,9 +39,8 @@ nav li{
     padding: 20px 50px;
 }
 h1{
-    padding: 20px;
-    padding-left: 0px;
-    font-size: 50px;
+    padding: 20px 20px 30px 0;
+    font-size: 60px;
 }
 p{
     font-size: larger;
@@ -56,12 +54,19 @@ hr{
     justify-content: baseline;
     flex-wrap: wrap;
 }
-.card{
+.card-organizator{
     background-color: #FFF6DC;
-    margin: 10px;
     border: 5px solid #EAB417;
+}
+.card-festival{
+    background-color: #ECFDFF;
+    border: 5px solid rgb(69, 67, 67);
+}
+.card{
+    margin: 10px;
     border-radius: 20px;
     width: 400px;
+    height: auto;
 }
 .card img{
     margin: 0;
@@ -86,7 +91,7 @@ hr{
 .card a{
     display: inline-block;
     text-decoration: none;
-    background-color: #333;
+    background-color: #EAB417;
     color: #FFF6DC;
     padding: 10px;
     font-weight: bold;
@@ -99,4 +104,62 @@ hr{
 }
 .card a:hover{
     color: white;
+}
+.main1{
+    z-index: 2;
+    background-color: #fff;
+    border-top: 3px solid #000;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+.main1 img{
+    z-index: 3;
+}
+.main1 p, img{
+    padding: 10px 20px;
+}
+.main1 h4{
+    font-size: 35px;
+    padding-top: 10px;
+}
+#welcome-text {
+    display: flex;
+    justify-content: center;
+}
+.right-content{
+    border: 2px solid #6a6863;
+    border-left: none;
+    border-right: none;
+    margin-right: 10px;
+}
+.main2 h2{
+    padding: 20px;
+    font-size: 40px;
+}
+.main2{
+    margin-top: 10px;
+    background-color: rgb(222, 222, 222);
+    border-radius: 10px;
+}
+#pozadina{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    opacity: 0.5;
+    z-index: 1;
+}
+.card-festival a{
+    left: 29%;
+    margin-top: 20px;
+    background-color: #333;
+    color: #ECFDFF;
+}
+.card-festival a:hover{
+    border-radius: 0;
 }
