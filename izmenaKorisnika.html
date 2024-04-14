@@ -1,0 +1,154 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <title>Izmena organizatora</title>
+            <link rel="stylesheet" href="styles/styles.css">
+            <link rel="stylesheet" href="styles/styles3.css">
+        </head>
+    
+        <body>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Organizatori</a></li>
+                    <li><a href="izmenaOrganizatora.html">Izmena organizatora</a></li>
+                    <li><span id="UlogujteSe"><u>Ulogujte se</u></span></li>
+                    <li><span id="RegistrujteSe"><u>Regitruj se</u></span></li>
+                </ul>
+            </nav>
+            <div id="wrapper">
+                <div class="forma" id="registracija" style="height: 19vh;">
+                    <h4>Registrujte se svojim podacima</h4>
+                    <form>
+                        <label>Email:</label>
+                        <input type="email" name="email"> <br>
+                        <label>Korisnicko ime:</label>
+                        <input type="text" name="korisnickoIme"> <br>
+                        <label>Lozinka:</label>
+                        <input type="password" name="lozinka">
+                        <input type="submit" name="submit" class="dugme dugme-levo" value="Registruj se">
+                    </form>
+                    <button class="dugme dugme-desno" id="zavrsiBTNReg">Zavrsi</button>
+                </div>
+                <div class="forma" id="login">
+                    <h4>Ulogujte se svojim podacima</h4>
+                    <form>
+                        <label>Korisnicko ime:</label>
+                        <input type="text" name="korisnickoIme"> <br>
+                        <label>Lozinka:</label>
+                        <input type="password" name="lozinka">
+                        <input type="submit" name="submit" class="dugme dugme-levo" value="Uloguj se">
+                    </form>
+                    <button id="zavrsiBTNLog" class="dugme dugme-desno">Zavrsi</button>
+                </div>
+                <div class="main">
+                    <h1>Izmena Korisnika</h1>
+                    <div class="content">
+                        <div class="row">
+                            <table>
+                                <tr>
+                                    <th>korisnicko ime</th>
+                                    <th>lozinka</th>
+                                    <th>Ime</th>
+                                    <th>Prezime</th>
+                                    <th>Email</th>
+                                    <th>Datum rodjenja</th>
+                                    <th>Adresa</th>
+                                    <th>Telefon</th>
+                                    <th>Zanimanje</th>
+                                </tr>
+                                <tr>
+                                    <td>petar_p</td>
+                                    <td>novapetar321</td>
+                                    <td>Petar</td>
+                                    <td>Pavlovic</td>
+                                    <td>petar.pavlovic@example.com</td>
+                                    <td>1994-10-22</td>
+                                    <td>Bulevar Oslobođenja 101, Novi Sad, 21000</td>
+                                    <td>061123123</td>
+                                    <td>Softverski inženjer</td>
+                                </tr>
+                            </table>
+                            <div class="dugmad dugmad-kor">
+                                <a id="izmena1" href="formaIzmeneKorisnika.html">Izmeni Korisnika</a>
+                                <a id="obrisi1">Obrisi Korisnika</a>
+                                <a id="dodaj1" href="formaDodavanjeKorisnika.html">Dodaj Korisnika</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <table>
+                                <tr>
+                                    <th>korisnicko ime</th>
+                                    <th>lozinka</th>
+                                    <th>Ime</th>
+                                    <th>Prezime</th>
+                                    <th>Email</th>
+                                    <th>Datum rodjenja</th>
+                                    <th>Adresa</th>
+                                    <th>Telefon</th>
+                                    <th>Zanimanje</th>
+                                </tr>
+                                <tr>
+                                    <td>markom</td>
+                                    <td>novamarko321</td>
+                                    <td>Marko</td>
+                                    <td>Marić</td>
+                                    <td>marko.maric@example.com</td>
+                                    <td>1990-09-17</td>
+                                    <td>Knez Mihailova 22, Beograd, 11000</td>
+                                    <td>063456456</td>
+                                    <td>Projektni menadžer</td>
+                                </tr>
+                            </table>
+                            <div class="dugmad dugmad-kor">
+                                <a>Izmeni Korisnika</a>
+                                <a>Obrisi Korisnika</a>
+                                <a>Dodaj Korisnika</a>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom: 0;">
+                            <table>
+                                <tr>
+                                    <th>korisnicko ime</th>
+                                    <th>lozinka</th>
+                                    <th>Ime</th>
+                                    <th>Prezime</th>
+                                    <th>Email</th>
+                                    <th>Datum rodjenja</th>
+                                    <th>Adresa</th>
+                                    <th>Telefon</th>
+                                    <th>Zanimanje</th>
+                                </tr>
+                                <tr>
+                                    <td>jovana_j</td>
+                                    <td>novajovana321</td>
+                                    <td>Jovana</td>
+                                    <td>Jankovic</td>
+                                    <td>jovana.jankovic@example.com</td>
+                                    <td>1982-05-05</td>
+                                    <td>Nikole Pašića 15, Zrenjanin, 23000</td>
+                                    <td>062987987</td>
+                                    <td>Grafički dizajner</td>
+                                </tr>
+                            </table>
+                            <div class="dugmad dugmad-kor">
+                                <a>Izmeni Korisnika</a>
+                                <a>Obrisi Korisnika</a>
+                                <a>Dodaj Korisnika</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="scripts/logovanje.js"></script>
+            <script>
+                document.getElementById('obrisi1').addEventListener('click', function(){
+                if(window.confirm("Da li ste sigurni da zelite da obrisete korisnika?")){
+                    window.alert("Uspesno ste obrisali korisnika");
+                }
+                else{
+                    window.alert("Niste obrisali korisnika");
+                }
+                });
+            </script>
+        </body>
+    </html>

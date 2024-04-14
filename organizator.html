@@ -1,27 +1,52 @@
 <DOCTYPE html>
 <html>
     <head>
-        <title>Pocetna stranica</title>
-        <link rel="stylesheet" href="stilovi.css">
+        <title>Organizator</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/styles1.css">
     </head>
 
     <body>
         <nav>
             <ul>
                 <li><a href="index.html">Organizatori</a></li>
-                <li><a href="">Izmena korisnika</a></li>
-                <li><a href="">Izmena organizatora</a></li>
-                <li><a href=""><u>Ulogujte se</u></a></li>
-                <li><a href=""><u>Regitruj se</u></a></li>
+                <li><a href="izmenaKorisnika.html">Izmena korisnika</a></li>
+                <li><a href="izmenaOrganizatora.html">Izmena organizatora</a></li>
+                <li><span id="UlogujteSe"><u>Ulogujte se</u></span></li>
+                <li><span id="RegistrujteSe"><u>Regitruj se</u></span></li>
             </ul>
         </nav>
         <div id="wrapper">
+            <div class="forma" id="registracija" style="height: 19vh;">
+                <h4>Registrujte se svojim podacima</h4>
+                <form>
+                    <label>Email:</label>
+                    <input type="email" name="email"> <br>
+                    <label>Korisnicko ime:</label>
+                    <input type="text" name="korisnickoIme"> <br>
+                    <label>Lozinka:</label>
+                    <input type="password" name="lozinka">
+                    <input type="submit" name="submit" class="dugme dugme-levo" value="Registruj se">
+                </form>
+                <button class="dugme dugme-desno" id="zavrsiBTNReg">Zavrsi</button>
+            </div>
+            <div class="forma" id="login">
+                <h4>Ulogujte se svojim podacima</h4>
+                <form>
+                    <label>Korisnicko ime:</label>
+                    <input type="text" name="korisnickoIme"> <br>
+                    <label>Lozinka:</label>
+                    <input type="password" name="lozinka">
+                    <input type="submit" name="submit" class="dugme dugme-levo" value="Uloguj se">
+                </form>
+                <button id="zavrsiBTNLog" class="dugme dugme-desno">Zavrsi</button>
+            </div>
             <div class="main">
-                <h1>Etno Srbija</h1>
+                <h1>Beo Art Fest</h1>
                 
                 <div class="main1">
-                    <img src="https://i.imgur.com/jsFrKCn.jpeg" alt="Organizator"/>
-                    <img id="pozadina" src="https://i.imgur.com/jsFrKCn.jpeg" alt="Organizator"/>
+                    <img src="https://i.imgur.com/OV15WM6.jpeg" alt="Organizator"/>
+                    <img id="pozadina" src="https://i.imgur.com/OV15WM6.jpeg" alt="Organizator"/>
                     <div class="right-content">
                         <div id="welcome-text">
                             <h4>Podaci o nama</h4>
@@ -47,7 +72,7 @@
                             <h3>Maldivi Pod Zvezdama</h3>
                             <p>Tip: <b>muzicki</b></p>
                             <p>Cena: <b>103254</b></p>
-                            <a href="">Vise o festivalu</a>
+                            <a href="festival.html">Vise o festivalu</a>
                         </div>
                         <div class="card card-festival">
                             <h3>Kopaonik Zimski Fest</h3>
@@ -59,5 +84,6 @@
                 </div>
             </div>
         </div>
+        <script src="scripts/logovanje.js"></script>
     </body>
 </html>

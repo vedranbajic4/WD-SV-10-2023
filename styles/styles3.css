@@ -1,0 +1,64 @@
+.content{
+   background-color: white;
+   /*border: 2px solid black;*/
+}
+.row img{
+   margin: 15px;
+   width: 40%;
+}
+h3{
+   font-size: 40px;
+   border: 1px solid black;
+   border-radius: 5px;
+   padding: 20px;
+   background-color: white;
+}
+.row{
+   align-items: center;
+   display: flex;
+   justify-content: space-evenly;
+   margin: 20px 0px;
+   background-color: #FFF6DC;
+   border: 5px solid #EAB417;
+   border-radius: 10px;
+}
+.dugmad{
+   background-color: #FFDFC8;
+   border: 1px solid white;
+   border-radius: 13px;
+   width: 250px;
+}
+.dugmad a{
+   display: block;
+   margin: 30px;
+   padding: 10px;
+   text-decoration: none;
+   border-radius: 10px;
+   font-size: larger;
+   cursor: pointer;
+   color: #FFDFC8;
+   background-color: white;
+   text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
+                1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+.dugmad a:hover{
+   border: 3px solid orange;
+   padding: 7px;
+}
+table, td, th{
+   border: 1px solid black;
+   border-collapse: collapse;
+}
+table{
+   background-color: rgb(245, 234, 234);
+}
+td, th{
+   padding: 5px;
+   font-size: large;
+}
+table{
+   margin: 20px;
+}
+.dugmad-kor{
+   margin: 30px;
+}

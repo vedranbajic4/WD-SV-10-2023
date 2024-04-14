@@ -2,19 +2,44 @@
 <html>
     <head>
         <title>Pocetna stranica</title>
-        <link rel="stylesheet" href="stilovi.css">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/styles1.css">
     </head>
 
     <body>
         <nav>
             <ul>
-                <li><a href="">Izmena korisnika</a></li>
-                <li><a href="">Izmena organizatora</a></li>
-                <li><a href=""><u>Ulogujte se</u></a></li>
-                <li><a href=""><u>Regitruj se</u></a></li>
+                <li><a href="izmenaKorisnika.html">Izmena korisnika</a></li>
+                <li><a href="izmenaOrganizatora.html">Izmena organizatora</a></li>
+                <li><span id="UlogujteSe"><u>Ulogujte se</u></span></li>
+                <li><span id="RegistrujteSe"><u>Regitruj se</u></span></li>
             </ul>
         </nav>
         <div id="wrapper">
+            <div class="forma" id="registracija" style="height: 19vh;">
+                <h4>Registrujte se svojim podacima</h4>
+                <form>
+                    <label>Email:</label>
+                    <input type="email" name="email"> <br>
+                    <label>Korisnicko ime:</label>
+                    <input type="text" name="korisnickoIme"> <br>
+                    <label>Lozinka:</label>
+                    <input type="password" name="lozinka">
+                    <input type="submit" name="submit" class="dugme dugme-levo" value="Registruj se">
+                </form>
+                <button class="dugme dugme-desno" id="zavrsiBTNReg">Zavrsi</button>
+            </div>
+            <div class="forma" id="login">
+                <h4>Ulogujte se svojim podacima</h4>
+                <form>
+                    <label>Korisnicko ime:</label>
+                    <input type="text" name="korisnickoIme"> <br>
+                    <label>Lozinka:</label>
+                    <input type="password" name="lozinka">
+                    <input type="submit" name="submit" class="dugme dugme-levo" value="Uloguj se">
+                </form>
+                <button id="zavrsiBTNLog" class="dugme dugme-desno">Zavrsi</button>
+            </div>
             <div class="main">
                 <h1>Organizatori festivala</h1>
                 <p>
@@ -30,14 +55,14 @@
                         <h3>BeoArt Fest</h3>
                         <p>Kontakt telefon: <b>011/3042-568</b></p>
                         <p>Email: <b>kontakt@beoartfest.rs</b></p>
-                        <a href="">Vise o organizatoru</a>
+                        <a href="organizator.html">Vise o organizatoru</a>
                     </div>
                     <div class="card card-organizator">
                         <img src="https://i.imgur.com/jsFrKCn.jpeg" alt="Organizator 2"/>
                         <h3>Etno Srbija</h3>
                         <p>Kontakt telefon: <b>011/4223-690</b></p>
                         <p>Email: <b>info@etnosrbija.rs</b></p>
-                        <a href="organizator.html">Vise o organizatoru</a>
+                        <a href="">Vise o organizatoru</a>
                     </div>
                     <div class="card card-organizator">
                         <img src="https://i.imgur.com/NhAzBBF.jpeg" alt="Organizator 3"/>
@@ -56,5 +81,6 @@
                 </div>
             </div>
         </div>
+        <script src="scripts/logovanje.js"></script>
     </body>
 </html>
