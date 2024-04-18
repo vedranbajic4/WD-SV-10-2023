@@ -1,95 +1,98 @@
-*{
-    font-family: inherit;
-    margin: 0;
-    padding: 0;
+* {
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
 }
-#wrapper{
-    background-color: #f2eee1;
-    display: flex;
-    justify-content: center;
-    padding: 50px 30px;
-    min-height: 100vh;
+#wrapper {
+  background-color: #f2eee1;
+  display: flex;
+  justify-content: center;
+  padding: 50px 30px;
+  min-height: 100vh;
 }
-nav ul{
-    padding: 20px 40px;
-    display: flex;
-    justify-content: right;
+nav ul {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: right;
 }
-nav ul li{
-    margin: 10px;
+nav ul li {
+  margin: 10px;
 }
-nav a, span{
-    text-decoration: none;
-    color: black;
-    padding: 6px;
-    font-weight: bold;
-    font-size: 20px;
+nav a,
+span {
+  text-decoration: none;
+  color: black;
+  padding: 6px;
+  font-weight: bold;
+  font-size: 20px;
 }
-span{
-    cursor: pointer;
+a,
+span {
+  cursor: pointer;
 }
-nav a:hover{
-    color: #EAB417;
+nav a:hover {
+  color: #eab417;
 }
-nav span:hover{
-    color: #EAB417;
+nav span:hover {
+  color: #eab417;
 }
-nav li{
-    list-style-type: none;
+nav li {
+  list-style-type: none;
 }
-.main{
-    border-radius: 10px;
-    background-color: white;
-    width: 80%;
-    box-shadow: 0 0 10px 5px #D3D3D3;
-    padding: 20px 50px;
+.main {
+  border-radius: 10px;
+  background-color: white;
+  width: 80%;
+  box-shadow: 0 0 10px 5px #d3d3d3;
+  padding: 20px 50px;
 }
-h1{
-    padding: 20px 20px 30px 0;
-    font-size: 60px;
+h1 {
+  padding: 20px 20px 30px 0;
+  font-size: 60px;
 }
-.forma{
-    margin-right: 10px;
-    position: absolute;
-    right: 0;
-    top: 10%;
-    background-color: rgba(211, 211, 211, 0.7);
-    width: 40vh;
-    height: 17vh;
-    text-align: end;
-    padding-top: 10px;
-    border: 2px solid black;
-    border-radius: 5px;
-    display: none;
-    z-index: 5;
+.forma {
+  margin-right: 10px;
+  position: absolute;
+  right: 0;
+  top: 10%;
+  background-color: rgba(211, 211, 211, 0.7);
+  width: 40vh;
+  height: 17vh;
+  text-align: end;
+  padding-top: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: none;
+  z-index: 5;
 }
-.forma h4{
-    text-align: center;
-    width: 80%;
-    margin-left: 10%;
-    margin-bottom: 10px;
-    font-size: large;
+.forma h4 {
+  text-align: center;
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 10px;
+  font-size: large;
 }
-label, h4{
-    background-color: rgb(211, 211, 211);
-    padding: 3px;
-    border-radius: 3px;
-    border: 1px solid black;
+label,
+h4 {
+  background-color: rgb(211, 211, 211);
+  padding: 3px;
+  border-radius: 3px;
+  border: 1px solid black;
 }
-.forma input{
-    margin: 5px;
+.forma input {
+  margin: 5px;
 }
-.dugme{
-    padding: 5px;
-    margin: 0;
-    margin-top: 5px;
-    height: 30px;
-    position: absolute;
-    bottom: 15px;
+.dugme {
+  padding: 5px;
+  margin: 0;
+  margin-top: 5px;
+  height: 30px;
+  position: absolute;
+  bottom: 15px;
 }
-.dugme-levo{
-    left: 20px;
+.dugme-levo {
+  left: 20px;
 }
-.dugme-desno{
-    right: 20px;
+.dugme-desno {
+  right: 20px;
 }
