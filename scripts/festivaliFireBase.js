@@ -2,7 +2,6 @@ let firebaseUrl = "https://wdfestivali-default-rtdb.firebaseio.com";
 
 var getButton = document.getElementById('getButton');
 window.addEventListener('load', function (e) {
-    console.log('load');
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (this.readyState == 4) {
