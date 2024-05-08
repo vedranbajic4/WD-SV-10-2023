@@ -55,68 +55,24 @@
           </form>
           <button id="zavrsiBTNLog" class="dugme dugme-desno">Zavrsi</button>
         </div>
+        <div id="deleteConfirmation" class="popup">
+          <h2>Potvrda</h2>
+          <p>Da li ste sigurni da zelite da obrisete organizatora?</p>
+          <button id="confirmDelete" onclick="kliknoDugme1()">Da</button>
+          <button id="cancelDelete" onclick="kliknoDugme2()">Ne</button>
+        </div>
+        <div id="deleted" class="popup">
+          <h2>Uspesno</h2>
+          <p>Obrisali ste organizatora</p>
+          <button id="OkKraj" onclick="kliknoDugme3()">Ok</button>
+        </div>
+
         <div class="main">
           <h1>Izmena Organizatora</h1>
-          <div class="content">
-            <div class="row" style="margin-top: 0">
-              <img
-                src="https://i.imgur.com/OV15WM6.jpeg"
-                alt="slika organizatora"
-              />
-              <h3>BeoArt fest</h3>
-              <div class="dugmad">
-                <a id="izmena1" href="formaIzmeneOrganizatora.html"
-                  >Izmeni Organizatora</a
-                >
-                <a id="obrisi1">Obrisi Organizatora</a>
-                <a id="dodaj1" href="formaDodavanjaFestivala.html"
-                  >Dodaj Festival</a
-                >
-              </div>
-            </div>
-            <div class="row">
-              <img
-                src="https://i.imgur.com/jsFrKCn.jpeg"
-                alt="slika organizatora"
-              />
-              <h3>Etno Srbija</h3>
-              <div class="dugmad">
-                <a>Izmeni Organizatora</a>
-                <a>Obrisi Organizatora</a>
-                <a>Dodaj Festival</a>
-              </div>
-            </div>
-            <div class="row" style="margin-bottom: 0">
-              <img
-                src="https://i.imgur.com/NhAzBBF.jpeg"
-                alt="slika organizatora"
-              />
-              <h3>Lazarevac Fest</h3>
-              <div class="dugmad">
-                <a>Izmeni Organizatora</a>
-                <a>Obrisi Organizatora</a>
-                <a>Dodaj Festival</a>
-              </div>
-            </div>
-          </div>
+          <div class="content"></div>
         </div>
       </div>
       <script src="../scripts/logovanje.js"></script>
-      <script>
-        document
-          .getElementById("obrisi1")
-          .addEventListener("click", function () {
-            if (
-              window.confirm(
-                "Da li ste sigurni da zelite da obrisete organizatora?"
-              )
-            ) {
-              window.alert("Uspesno ste obrisali organizatora");
-            } else {
-              window.alert("Niste obrisali organizatora");
-            }
-          });
-      </script>
-    </body>
-  </html></DOCTYPE
->
+      <script src="../scripts/izmenaOrganizatoraFB.js"></script>
+    </body></html
+></DOCTYPE>

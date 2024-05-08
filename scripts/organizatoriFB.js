@@ -35,7 +35,6 @@ function napraviKartice(){
                             pd3.innerText = sve[id][idp].cena;
                             pd2.appendChild(pd3);
                             podelem.appendChild(pd2);
-
                             
                             pd2 = document.createElement("a");
                             pd2.innerText = "Vise o festivalu";
