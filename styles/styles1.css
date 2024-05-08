@@ -1,123 +1,130 @@
-p{
-    font-size: larger;
+p {
+  font-size: larger;
 }
-hr{
-    margin-top: 20px;
+hr {
+  margin-top: 20px;
 }
-.cards{
-    margin: 30px 0;
-    display: flex;
-    justify-content: baseline;
-    flex-wrap: wrap;
+.cards {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-.card-organizator{
-    background-color: #FFF6DC;
-    border: 5px solid #EAB417;
+.card-organizator {
+  background-color: #fff6dc;
+  border: 5px solid #eab417;
 }
-.card-festival{
-    background-color: #FFF6DC;
-    border: 5px solid rgb(69, 67, 67);
+.card-festival {
+  position: relative;
+  background-color: #fff6dc;
+  border: 5px solid rgb(69, 67, 67);
+  height: 220px;
 }
-.card{
-    margin: 10px;
-    border-radius: 20px;
-    width: 400px;
-    height: auto;
+.card {
+  margin: 10px;
+  border-radius: 20px;
+  width: 400px;
 }
-.card img{
-    margin: 0;
-    padding: 5px;
-    border-radius: 15px 15px 15px 15px;
-    width: 97%;
-    height: 240px;
+.card img {
+  margin: 0;
+  padding: 5px;
+  border-radius: 15px 15px 15px 15px;
+  width: 97%;
+  height: 240px;
 }
-.card img:hover{
-    scale: 1.1;
-    border-radius: 0;
+.card img:hover {
+  scale: 1.1;
+  border-radius: 0;
 }
-.card h3{
-    padding: 10px;
-    font-size: 30px;
+.card h3 {
+  padding: 10px;
+  font-size: 30px;
 }
-.card p{
-    padding: 3px;
-    padding-left: 12px;
-    font-size: 20px;
+.card p {
+  padding: 3px;
+  padding-left: 12px;
+  font-size: 20px;
 }
-.card a{
-    display: inline-block;
-    text-decoration: none;
-    background-color: #EAB417;
-    color: #FFF6DC;
-    padding: 10px;
-    font-weight: bold;
-    font-size: 20px;
-    position: relative;
-    bottom: 5px;
-    left: 200px;
-    border-radius: 10px;
-    margin: 15px 0;
+.card a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #eab417;
+  color: #fff6dc;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  position: relative;
+  bottom: 5px;
+  left: 200px;
+  border-radius: 10px;
+  margin: 15px 0;
 }
-.card a:hover{
-    color: white;
+.card a:hover {
+  color: white;
 }
-.main1{
-    z-index: 2;
-    background-color: #fff;
-    border-top: 3px solid #000;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
+.main1 {
+  z-index: 2;
+  background-color: #fff;
+  border-top: 3px solid #000;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
 }
-.main1 img{
-    z-index: 3;
+.main1 img {
+  z-index: 3;
 }
-.main1 p, img{
-    padding: 10px 20px;
+.main1 p,
+img {
+  padding: 10px 20px;
 }
-.main1 h4{
-    font-size: 35px;
-    padding-top: 10px;
+.main1 h4 {
+  font-size: 35px;
+  padding-top: 10px;
+  background-color: transparent;
+  border: none;
 }
 #welcome-text {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
-.right-content{
-    border: 2px solid #6a6863;
-    border-left: none;
-    border-right: none;
-    margin-right: 10px;
+.right-content {
+  border: 2px solid #6a6863;
+  border-left: none;
+  border-right: none;
+  margin-right: 10px;
+  z-index: 5;
 }
-.main2{
-    margin-top: 10px;
-    background-color: #f2eee1;
-    border-radius: 10px;
-    padding-bottom: 30px;
-    border: 1px solid #EAB417;
+.main2 {
+  margin-top: 10px;
+  background-color: #f2eee1;
+  border-radius: 10px;
+  padding-bottom: 30px;
+  border: 1px solid #eab417;
 }
-.main2 h2{
-    padding: 20px;
-    font-size: 40px;
+.main2 h2 {
+  padding: 20px;
+  font-size: 40px;
 }
-#pozadina{
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    opacity: 0.5;
-    z-index: 1;
+#pozadina {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  opacity: 0.35;
+  z-index: 1;
 }
-.card-festival a{
-    left: 29%;
-    margin-top: 20px;
-    background-color: #333;
-    color: #ECFDFF;
+.card-festival a {
+  left: 29%;
+  margin-top: 20px;
+  background-color: #333;
+  color: #ecfdff;
+  position: absolute;
+  top: 133px;
 }
-.card-festival a:hover{
-    border-radius: 0;
+.card-festival a:hover {
+  border-radius: 0;
 }
