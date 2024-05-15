@@ -1,6 +1,10 @@
 let firebaseUrl = "https://wdfestivali-default-rtdb.firebaseio.com";
 
-window.addEventListener('load', function (e) {
+document.addEventListener("DOMContentLoaded", function(event) { 
+    console.log("Poziva se load");
+    getContent();
+});
+function getContent(){
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (this.readyState == 4) {
@@ -61,7 +65,7 @@ window.addEventListener('load', function (e) {
 
     request.open('GET', firebaseUrl + '/organizatoriFestivala.json');
     request.send();
-});
+};
 function dodajFestivalUPutanju(){
     let clickedBtn = this;
     let id = clickedBtn.getAttribute("data-id");

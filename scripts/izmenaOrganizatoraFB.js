@@ -32,7 +32,7 @@ function getAllOrganizatori(){
                     
                     var dugme = document.createElement("a");
                     dugme.setAttribute("data-id", of);
-                    dugme.onclick = brisanjeOrganizatora;
+                    dugme.onclick = brisanje;
                     dugme.innerHTML = "Obrisi organizatora";
                     podelem2.appendChild(dugme);     //drugo dugme za brisanje
                     
@@ -57,8 +57,6 @@ function getAllOrganizatori(){
     request.open('GET', firebaseUrl + '/organizatoriFestivala.json');
     request.send();
 }
-getAllOrganizatori()
-
 function dodajPutanjuIzmena(){
     let clickedBtn = this;
     let id = clickedBtn.getAttribute("data-id");
@@ -69,31 +67,4 @@ function dodajPutanjuDodavanje(){
     let id = clickedBtn.getAttribute("data-id");
     window.location.href = "formaDodavanjaFestivala.html?id="+id;
 }
-let organizatorId;
-function brisanjeOrganizatora(){
-    organizatorId = this.getAttribute("data-id");
-    document.getElementById("deleteConfirmation").style.opacity = 1;
-}
-function kliknoDugme2() {
-    document.getElementById("deleteConfirmation").style.opacity = 0;
-}
-function kliknoDugme1() {
-    document.getElementById("deleteConfirmation").style.opacity = 0;
-    document.getElementById("deleted").style.opacity = 1;
-}
-function kliknoDugme3() {
-    document.getElementById("deleted").style.opacity = 0;
-    let request = new XMLHttpRequest();
-    request.onreadystatechange = function () {
-        if (this.readyState == 4) {
-          if (this.status == 200) {
-            location.reload();
-          } else {
-            alert("Greška prilikom brisanja organizatora.");
-          }
-        }
-      };
-
-    request.open("DELETE", firebaseUrl + "/organizatoriFestivala/" + organizatorId + ".json");
-    request.send();
-}
+getAllOrganizatori();

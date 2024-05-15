@@ -4,51 +4,56 @@
     <meta name="referrer" content="no-referrer" />
     <title>Forma izmene organizatora</title>
     <link rel="stylesheet" href="../styles/forme.css" />
+    <link rel="stylesheet" href="../styles/potvrda.css" />
   </head>
   <body>
     <div id="wraper">
-      <h1>Izmena organizatora</h1>
-      <form>
+      <h2>Izmena organizatora</h2>
+      <form id="forma1">
         <label>Naziv organizatora:</label>
-        <input type="text" value="BeoArt Fest" /><br />
+        <input type="text" /><br />
         <label>Adresa:</label>
-        <input type="text" value="Knez Mihailova 48, Beograd, 11000" /><br />
+        <input type="text" /><br />
         <label>Godina osnivanja:</label>
-        <input type="number" min="1" value="2015" /><br />
+        <input type="number" min="1" /><br />
         <label>Logo:</label>
-        <input type="text" value="https://i.imgur.com/OV15WM6.jpeg" /><br />
-        <img
-          src="https://i.imgur.com/OV15WM6.jpeg"
-          alt="slika logoa"
-          style="width: 300px; height: 200px"
-        /><br />
+        <input type="text" /><br />
+        <img alt="slika logoa" style="width: 300px; height: 200px" /><br />
         <label>Kontakt telefon:</label>
-        <input type="text" value="011/3042-568" /><br />
+        <input type="text" /><br />
         <label>Email:</label>
-        <input type="email" value="kontakt@beoartfest.rs" /><br />
+        <input type="email" /><br />
 
         <input type="submit" class="btn" value="Izmeni" />
         <a href="izmenaOrganizatora.html">Nazad</a>
       </form>
+
+      <div id="deleteConfirmation" class="popup">
+        <h2>Potvrda</h2>
+        <p>Da li ste sigurni da zelite da obrisete festival?</p>
+        <button type="button" id="confirmDelete" onclick="kliknoDugme1()">
+          Da
+        </button>
+        <button type="button" id="cancelDelete" onclick="kliknoDugme2()">
+          Ne
+        </button>
+      </div>
+      <div id="deleted" class="popup">
+        <h2>Uspesno</h2>
+        <p>Obrisali ste festival</p>
+        <button type="button" onclick="obrisiFestival()">Ok</button>
+      </div>
+      <br />
+      <div id="edited" class="popup">
+        <h2>Uspesno</h2>
+        <p>Izmenili ste organizatora</p>
+        <button type="button" onclick="closeOk()">Ok</button>
+      </div>
       <br />
       <h3>Festivali:</h3>
-      <div id="festivali">
-        <div class="card-festival">
-          <h4>Naziv festivala</h4>
-          <img src="https://i.imgur.com/OV15WM6.jpeg" alt="slika festivala" />
-          <button class="btn">Obrisi</button>
-        </div>
-        <div class="card-festival">
-          <h4>Naziv festivala</h4>
-          <img src="#" alt="slika festivala" />
-          <button class="btn">Obrisi</button>
-        </div>
-        <div class="card-festival">
-          <h4>Naziv festivala</h4>
-          <img src="#" alt="slika festivala" />
-          <button class="btn">Obrisi</button>
-        </div>
-      </div>
+      <div id="festivali"></div>
     </div>
+    <script src="../scripts/izmenaOrganizatoraFormaFB.js"></script>
+    <script src="../scripts/potvrdaBrisanje.js"></script>
   </body>
 </html>

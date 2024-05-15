@@ -1,0 +1,22 @@
+.popup {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+.popup button {
+  width: auto;
+  height: 40px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #ffdfc8;
+  border: 1px solid white;
+}
