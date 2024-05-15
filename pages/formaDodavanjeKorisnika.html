@@ -4,8 +4,14 @@
     <meta name="referrer" content="no-referrer" />
     <title>Forma dodavanja Korisnika</title>
     <link rel="stylesheet" href="../styles/forme.css" />
+    <link rel="stylesheet" href="../styles/potvrda.css" />
   </head>
   <body>
+    <div id="potvrda" class="popup">
+      <h2>Uspesno</h2>
+      <p>Dodali ste korisnika u sistem</p>
+      <button type="button" onclick="closeOk()">Ok</button>
+    </div>
     <div id="wraper">
       <h1>Dodavanje Korisnika</h1>
       <form>
@@ -32,5 +38,6 @@
         <a href="izmenaKorisnika.html">Nazad</a>
       </form>
     </div>
+    <script src="../scripts/formaDodavanjeKorisnikaFB.js"></script>
   </body>
 </html>

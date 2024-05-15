@@ -66,3 +66,7 @@ table {
 .dugmad-kor {
   margin: 30px;
 }
+#header {
+  display: flex;
+  justify-content: space-between;
+}
