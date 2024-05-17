@@ -4,15 +4,21 @@
     <meta name="referrer" content="no-referrer" />
     <title>Forma izmene Korisnika</title>
     <link rel="stylesheet" href="../styles/forme.css" />
+    <link rel="stylesheet" href="../styles/potvrda.css" />
   </head>
   <body>
     <div id="wraper">
+      <div id="potvrda" class="popup">
+        <h2>Uspesno</h2>
+        <p>Izmenili ste korisika</p>
+        <button type="button" onclick="closeOk()">Ok</button>
+      </div>
       <h1>Dodavanje Korisnika</h1>
       <form>
         <label>KorisnickoIme:</label>
         <input type="text" value="petar_p" /><br />
         <label>Lozinka:</label>
-        <input type="text" value="novapetar321" /><br />
+        <input type="password" value="novapetar321" /><br />
         <label>Ime:</label>
         <input type="text" value="Petar" /><br />
         <label>Prezime:</label>
@@ -35,5 +41,6 @@
         <a href="izmenaKorisnika.html">Nazad</a>
       </form>
     </div>
+    <script src="../scripts/formaIzmeneKorisnikaFB.js"></script>
   </body>
 </html>
