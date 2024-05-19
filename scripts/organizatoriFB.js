@@ -35,6 +35,13 @@ function napraviKartice(){
                             pd3.innerText = sve[id][idp].cena;
                             pd2.appendChild(pd3);
                             podelem.appendChild(pd2);
+
+                            /*pd2 = document.createElement("p");
+                            pd2.innerHTML = "Adresa: <b>";
+                            pd3 = document.createElement("b");
+                            pd3.innerText = sve[id][idp].adresa;
+                            pd2.appendChild(pd3);
+                            podelem.appendChild(pd2);*/
                             
                             pd2 = document.createElement("a");
                             pd2.innerText = "Vise o festivalu";
@@ -50,7 +57,7 @@ function napraviKartice(){
                 }
 
             } else {
-                alert('Error occurred. Cars could not be loaded.')
+                alert('Greska pri ucitavanju festivala')
             }
         }
     }
@@ -75,7 +82,7 @@ function napraviStranicu(){ //pravi i pocetan deo za organizatora
 
                 let naslov = document.createElement('h1');
                 let main = document.getElementsByClassName('main')[0];
-                let main2 = document.getElementsByClassName('main2')[0];
+                let main2 = document.getElementsByClassName('searchBar')[0];
 
                 naslov.innerHTML = sve[idOrganizatora].naziv;
                 main.insertBefore(naslov, main2);
@@ -128,5 +135,76 @@ function napraviStranicu(){ //pravi i pocetan deo za organizatora
     request.open('GET', firebaseUrl + '/organizatoriFestivala.json');
     request.send();
 }
-
 napraviStranicu();
+
+let niz_vrednosti1 = [];
+function pretrazi1(){
+    let input = document.getElementById("i1");
+    let filter = input.value.toUpperCase();
+    let cards = document.getElementsByClassName("card-festival");
+    if(niz_vrednosti1.length == 0){
+        for(let i = 0; i < cards.length; i++){
+            niz_vrednosti1.push(cards[i].getElementsByTagName("h3")[0].innerText);
+        }
+    }
+
+    if(input.value == ""){
+        for(let i = 0; i < cards.length; i++){
+            cards[i].style.display = "block";
+            cards[i].getElementsByTagName("h3")[0].innerHTML = niz_vrednosti1[i];
+        }
+        return;
+    }
+
+    for(let i = 0; i < cards.length; i++){
+        var h3 = cards[i].getElementsByTagName("h3")[0];
+        var txtValue = h3.innerText;
+        if(txtValue.toUpperCase().indexOf(filter) > -1){
+            cards[i].style.display = "block";
+            var index = txtValue.toUpperCase().indexOf(filter);
+            var txtValue1 = txtValue.substring(0, index);
+            var txtValue2 = txtValue.substring(index, index + filter.length);
+            var txtValue3 = txtValue.substring(index + filter.length);
+            cards[i].getElementsByTagName("h3")[0].innerHTML = txtValue1 + "<span class='highlight'>" + txtValue2 + "</span>" + txtValue3;
+        }
+        else{
+            cards[i].style.display = "none";
+        }
+    }
+}
+
+let niz_vrednosti3 = [];
+function pretrazi3(){
+    let input = document.getElementById("i3");
+    let filter = input.value.toUpperCase();
+    let cards = document.getElementsByClassName("card-festival");
+    if(niz_vrednosti3.length == 0){
+        for(let i = 0; i < cards.length; i++){
+            niz_vrednosti3.push(cards[i].getElementsByTagName("b")[1].innerText);
+        }
+    }
+
+    if(input.value == ""){
+        for(let i = 0; i < cards.length; i++){
+            cards[i].style.display = "block";
+            cards[i].getElementsByTagName("b")[1].innerHTML = niz_vrednosti3[i];
+        }
+        return;
+    }
+
+    for(let i = 0; i < cards.length; i++){
+        var bold = cards[i].getElementsByTagName("b")[1];
+        var txtValue = bold.innerText;
+        if(txtValue.toUpperCase().indexOf(filter) > -1){
+            cards[i].style.display = "block";
+            var index = txtValue.toUpperCase().indexOf(filter);
+            var txtValue1 = txtValue.substring(0, index);
+            var txtValue2 = txtValue.substring(index, index + filter.length);
+            var txtValue3 = txtValue.substring(index + filter.length);
+            cards[i].getElementsByTagName("b")[1].innerHTML = txtValue1 + "<span class='highlight2'>" + txtValue2 + "</span>" + txtValue3;
+        }
+        else{
+            cards[i].style.display = "none";
+        }
+    }
+}

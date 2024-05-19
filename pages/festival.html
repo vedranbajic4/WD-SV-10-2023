@@ -5,6 +5,7 @@
       <title>Festival</title>
       <link rel="stylesheet" href="../styles/styles.css" />
       <link rel="stylesheet" href="../styles/styles2.css" />
+      <link rel="stylesheet" href="../styles/potvrda.css" />
     </head>
 
     <body>
@@ -15,24 +16,43 @@
           <li>
             <a href="izmenaOrganizatora.html">Izmena organizatora</a>
           </li>
-          <li>
+          <li id="ulogujteSe">
             <span id="UlogujteSe"><u>Ulogujte se</u></span>
           </li>
-          <li>
+          <li id="registrujteSe">
             <span id="RegistrujteSe"><u>Registruj se</u></span>
+          </li>
+          <li id="liKorisnik" style="display: none; border: 1px solid black">
+            <span id="korisnikIme"></span>
+          </li>
+          <li id="liDugme" style="display: none">
+            <span id="logOut">Izlogujte se</span>
           </li>
         </ul>
       </nav>
       <div id="wrapper">
-        <div class="forma" id="registracija">
+        <div class="forma" id="registracija" style="height: 44%">
           <h4>Registrujte se svojim podacima</h4>
           <form>
-            <label>Email:</label>
-            <input type="email" name="email" /> <br />
-            <label>Korisnicko ime:</label>
-            <input type="text" name="korisnickoIme" /> <br />
+            <label>KorisnickoIme:</label>
+            <input type="text" /><br />
             <label>Lozinka:</label>
-            <input type="password" name="lozinka" />
+            <input type="text" /><br />
+            <label>Ime:</label>
+            <input type="text" /><br />
+            <label>Prezime:</label>
+            <input type="text" /><br />
+            <label>Email:</label>
+            <input type="email" /><br />
+            <label>Datum rodjenja:</label>
+            <input type="date" /><br />
+            <label>Adresa:</label>
+            <input type="text" /><br />
+            <label>Telefon:</label>
+            <input type="text" /><br />
+            <label>Zanimanje:</label>
+            <input type="text" /><br />
+
             <input
               type="submit"
               name="submit"
@@ -57,6 +77,11 @@
             />
           </form>
           <button id="zavrsiBTNLog" class="dugme dugme-desno">Zavrsi</button>
+        </div>
+        <div id="potvrda" class="popup">
+          <h2>Uspesno</h2>
+          <p>Registrovali ste se u sistem</p>
+          <button type="button" onclick="closeOk()">Ok</button>
         </div>
 
         <div class="main">

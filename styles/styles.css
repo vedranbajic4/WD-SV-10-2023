@@ -52,7 +52,7 @@ h1 {
 }
 .forma {
   margin-right: 10px;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 10%;
   background-color: rgba(211, 211, 211, 0.7);

@@ -50,8 +50,6 @@ function getContent(){
                     //dodao sam link
                     velikiDiv[0].appendChild(karta);
                 }
-                // Izvajanje svakog pojedinacnog automobila iteriranjem kroz atribute objekta
-                
             } else {
                 alert('Greska pri ucitavanju podataka.')
                 window.location.href = "pages/error.html";
@@ -68,3 +66,38 @@ function dodajFestivalUPutanju(){
     window.location.href = "pages/organizator.html?id="+id;
 }
 getContent();
+let niz_vrednosti = [];
+function pretrazi(){
+    let input = document.getElementById("pretragaBox");
+    let filter = input.value.toUpperCase();
+    let cards = document.getElementsByClassName("card-organizator");
+    if(niz_vrednosti.length == 0){
+        for(let i = 0; i < cards.length; i++){
+            niz_vrednosti.push(cards[i].getElementsByTagName("h3")[0].innerText);
+        }
+    }
+
+    if(input.value == ""){
+        for(let i = 0; i < cards.length; i++){
+            cards[i].style.display = "block";
+            cards[i].getElementsByTagName("h3")[0].innerHTML = niz_vrednosti[i];
+        }
+        return;
+    }
+
+    for(let i = 0; i < cards.length; i++){
+        var h3 = cards[i].getElementsByTagName("h3")[0];
+        var txtValue = h3.innerText;
+        if(txtValue.toUpperCase().indexOf(filter) > -1){
+            cards[i].style.display = "block";
+            var index = txtValue.toUpperCase().indexOf(filter);
+            var txtValue1 = txtValue.substring(0, index);
+            var txtValue2 = txtValue.substring(index, index + filter.length);
+            var txtValue3 = txtValue.substring(index + filter.length);
+            cards[i].getElementsByTagName("h3")[0].innerHTML = txtValue1 + "<span class='highlight'>" + txtValue2 + "</span>" + txtValue3;
+        }
+        else{
+            cards[i].style.display = "none";
+        }
+    }
+}
