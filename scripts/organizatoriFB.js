@@ -94,6 +94,7 @@ function napraviStranicu(){ //pravi i pocetan deo za organizatora
                 podelem.alt = "Organizator";
                 podelem.src = sve[idOrganizatora].logo;
                 podelem.style = "max-width: 60%;";
+                podelem.classList.add("slika");
                 main1.appendChild(podelem); //stavljam sliku
                 
                 podelem = document.createElement('img');

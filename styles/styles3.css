@@ -58,7 +58,9 @@ table {
 td,
 th {
   padding: 5px;
-  font-size: large;
+  font-size: medium;
+  max-width: 70px;
+  overflow-wrap: break-word;
 }
 table {
   margin: 20px;
@@ -69,4 +71,64 @@ table {
 #header {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 1320px) {
+  .dugmad a {
+    margin: 5px;
+    padding: 5px;
+    font-size: small;
+  }
+  h3 {
+    font-size: medium;
+  }
+  img {
+    max-width: 200px;
+  }
+  td,
+  th {
+    padding: 0;
+  }
+  table {
+    font-size: smaller;
+  }
+}
+@media screen and (max-width: 800px) {
+  .row img {
+    margin: 0px;
+    max-width: 100px;
+  }
+  h3 {
+    padding: 3px;
+    font-size: small;
+  }
+}
+@media screen and (max-width: 420px) {
+  .row {
+    flex-direction: column;
+  }
+  .dugmad {
+    width: 90%;
+    margin: 5px;
+  }
+  td,
+  th {
+    overflow-wrap: break-word;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 1040px) {
+  td,
+  th {
+    display: none;
+    overflow-wrap: normal;
+    max-width: 500px;
+    padding: 0 10px;
+  }
+  .bitna {
+    display: block;
+  }
+  .dugmad a,
+  table {
+    font-size: large;
+  }
 }

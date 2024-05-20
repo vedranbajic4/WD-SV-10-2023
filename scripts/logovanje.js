@@ -1,4 +1,3 @@
-//let firebaseUrl = "https://wdfestivali-default-rtdb.firebaseio.com";
 let ulogovanUsername = "";
 document.getElementById("zavrsiBTNLog").addEventListener('click', function(){
    document.getElementById('login').style.display = 'none';
@@ -28,8 +27,39 @@ function randomString(){
    }
    return ret;
 }
+function popuni_poruku(i, str){
+   document.getElementsByClassName("porukica")[i].style.display = "block";
+   document.getElementsByClassName("porukica")[i].innerText = str;
+}
+function jelTelefon(str){
+   for (let i = 0; i < str.length; i++){
+       if (str[i] < '0' || str[i] > '9'){
+           return false;
+       }
+   }
+   return true;
+}
+korImena = [];
 document.getElementsByTagName("form")[0].addEventListener("submit", function(e){ //REGISTRACIJA
+   e.preventDefault();
    let inputs = document.getElementsByTagName("input");
+   for(ime in korImena){
+      if (korImena[ime] == inputs[0].value && inputs[0].value != ""){
+         popuni_poruku(0, "Postojeci username");
+         return;
+      }
+   }
+   for (let i = 0; i < 9; i++){
+       if (inputs[i].value == ""){
+         popuni_poruku(i, "Polje ne sme biti prazno");
+         return;
+       }
+   }
+   if (jelTelefon(inputs[7].value) == false){
+      popuni_poruku(7, "Neispravan broj telefona");
+      return;
+   }
+
    let korisnik = {
        "korisnickoIme": inputs[0].value,
        "lozinka": inputs[1].value,
@@ -41,14 +71,12 @@ document.getElementsByTagName("form")[0].addEventListener("submit", function(e){
        "telefon": inputs[7].value,
        "zanimanje": inputs[8].value
    }
-   
    var request = new XMLHttpRequest();
    request.open('PUT', firebaseUrl + '/korisnici/' + randomString() + '.json', true);
    request.send(JSON.stringify(korisnik));
    document.getElementById('registracija').style.display = 'none';
    document.getElementById("potvrda").style.display = "block";
    ulogovanUsername = korisnik.korisnickoIme;
-   e.preventDefault();
 });
 document.getElementsByTagName("form")[1].addEventListener("submit", function(e){ //LOGOVANJE
    e.preventDefault();
@@ -97,3 +125,35 @@ function prebaciNaKorisnika(){
 
    document.getElementById('korisnikIme').innerText = ulogovanUsername;
 }
+function toggleMenu(){
+   var navLinks = document.getElementsByClassName('nav-links')[0];
+   navLinks.classList.toggle('active');
+}
+window.addEventListener('resize', function() {
+   if (window.innerWidth > 800) {
+      document.getElementsByClassName('nav-links')[0].classList.remove('active');
+   }
+});
+document.addEventListener('click', function(event) {
+   if (event.target.tagName.toLowerCase() === 'input') {
+       for(var i = 0; i < 9; i++){
+           document.getElementsByClassName("porukica")[i].style.display = "none";
+       }
+   }
+});
+window.addEventListener('load', function(){
+   var request = new XMLHttpRequest();
+   request.onreadystatechange = function () {
+      if (this.readyState == 4) {
+         if (this.status == 200) {
+            sve = JSON.parse(request.responseText);
+            for(kor in sve){
+               korImena.push(sve[kor].korisnickoIme);
+            }
+            return false;
+         }
+      }
+   }
+   request.open('GET', firebaseUrl + '/korisnici.json');
+   request.send();
+});

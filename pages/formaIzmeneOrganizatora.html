@@ -3,8 +3,9 @@
   <head>
     <meta name="referrer" content="no-referrer" />
     <title>Forma izmene organizatora</title>
-    <link rel="stylesheet" href="../styles/forme.css" />
     <link rel="stylesheet" href="../styles/potvrda.css" />
+    <link rel="stylesheet" href="../styles/forme.css" />
+    <link rel="stylesheet" href="../styles/samoLabele.css" />
   </head>
   <body>
     <div id="wraper">
@@ -12,17 +13,28 @@
       <form id="forma1">
         <label>Naziv organizatora:</label>
         <input type="text" /><br />
+        <label class="porukica2">nesto</label>
+
         <label>Adresa:</label>
         <input type="text" /><br />
+        <label class="porukica2"></label>
+
         <label>Godina osnivanja:</label>
         <input type="number" min="1" /><br />
+        <label class="porukica2"></label>
+
         <label>Logo:</label>
         <input type="text" /><br />
-        <img alt="slika logoa" style="width: 300px; height: 200px" /><br />
+        <label class="porukica2"></label>
+        <img alt="slika logoa" id="slidza" /><br />
+
         <label>Kontakt telefon:</label>
         <input type="text" /><br />
+        <label class="porukica2"></label>
+
         <label>Email:</label>
         <input type="email" /><br />
+        <label class="porukica2"></label>
 
         <input type="submit" class="btn" value="Izmeni" />
         <a href="izmenaOrganizatora.html">Nazad</a>

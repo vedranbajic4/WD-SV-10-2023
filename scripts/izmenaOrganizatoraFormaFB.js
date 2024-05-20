@@ -69,8 +69,21 @@ function ucitajFestivale(){
     request.open('GET', firebaseUrl + '/festivali.json');
     request.send();
 }
+function popuni_poruku2(i, poruka){
+    document.getElementsByClassName("porukica2")[i].innerText = poruka;
+    document.getElementsByClassName("porukica2")[i].style.display = "block";
+}
 document.getElementsByTagName("form")[0].addEventListener("submit", function(e){
+    e.preventDefault();
     let inputs = document.getElementsByTagName("input");
+    for (let i = 0; i < 6; i++){
+        console.log(inputs[i].value);
+        if (inputs[i].value == ""){
+          popuni_poruku2(i, "Polje ne sme biti prazno");
+          return;
+        }
+    }
+ 
     let organizator = {
       "adresa": inputs[1].value,
       "email": inputs[5].value,
@@ -85,7 +98,6 @@ document.getElementsByTagName("form")[0].addEventListener("submit", function(e){
     request.open('PUT', firebaseUrl + '/organizatoriFestivala/' + getParamValue("id") + '.json', true);
     request.send(JSON.stringify(organizator));
     
-    e.preventDefault();
     document.getElementById("edited").style.display="block";
     //ucitajOrganizatora();
     ucitajFestivale();
@@ -110,3 +122,10 @@ function getParamValue(name) {
 function closeOk(){
     document.getElementById("edited").style.display="none";
 }
+document.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() === 'input') {
+        for(var i = 0; i < 6; i++){
+            document.getElementsByClassName("porukica2")[i].style.display = "none";
+        }
+    }
+ });

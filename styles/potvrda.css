@@ -9,6 +9,7 @@
   padding: 20px;
   display: none;
   transition: opacity 0.3s ease-in-out;
+  z-index: 5;
 }
 .popup button {
   width: auto;
@@ -35,6 +36,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 40%;
+  margin: 10px;
+}
+@media screen and (max-width: 800px) {
+  .pretragaDiv {
+    width: 65%;
+  }
 }
 .searchBar {
   display: flex;
@@ -53,4 +61,12 @@
   background-color: yellow;
   cursor: default;
   padding: 0;
+}
+@media screen and (max-width: 660px) {
+  .searchBar {
+    display: block;
+  }
+  .pretragaDiv {
+    width: 100%;
+  }
 }

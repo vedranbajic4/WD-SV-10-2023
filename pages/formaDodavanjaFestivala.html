@@ -4,31 +4,47 @@
     <meta name="referrer" content="no-referrer" />
     <title>Forma dodavanja festivala</title>
     <link rel="stylesheet" href="../styles/forme.css" />
+    <link rel="stylesheet" href="../styles/samoLabele.css" />
+    <link rel="stylesheet" href="../styles/potvrda.css" />
   </head>
   <body>
     <div id="wraper">
+      <div id="potvrda" class="popup">
+        <h2>Uspesno</h2>
+        <p>Dodali ste festival</p>
+        <button type="button" onclick="closeOk()">Ok</button>
+      </div>
       <h1>Dodavanje festivala</h1>
       <form>
         <label>Naziv festivala:</label>
-        <input type="text" required /><br />
+        <input type="text" /><br />
+        <label class="porukica2"></label>
 
         <label>Opis festivala:</label>
-        <input type="text" required /><br />
+        <input type="text" /><br />
+        <label class="porukica2"></label>
 
         <label>Linkovi slika</label>
-        <input type="text" required /><br />
+        <input type="text" /><br />
+        <label class="porukica2"></label>
 
         <label>Tip:</label>
-        <input type="text" required /><br />
+        <input type="text" /><br />
+        <label class="porukica2"></label>
 
         <label>Prevoz:</label>
-        <input type="text" required /><br />
+        <input type="text" /><br />
+        <label class="porukica2"></label>
 
         <label>MaxOsoba:</label>
-        <input type="number" min="1" required /><br />
+        <input type="number" min="1" /><br />
+        <label class="porukica2"></label>
 
         <label>Cena:</label>
-        <input type="number" min="1" required /><br /><br /><br />
+        <input type="number" min="1" /><br />
+        <label class="porukica2"></label>
+
+        <br /><br />
 
         <input type="submit" class="btn" value="Dodaj" />
         <a href="izmenaOrganizatora.html">Nazad</a>

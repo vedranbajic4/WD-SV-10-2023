@@ -8,8 +8,8 @@
 }
 #slikaUGaleriji {
   border: 2px solid black;
-  width: 890px;
-  height: 550px;
+  width: 70%;
+  height: 65%;
   opacity: 0;
   transition: opacity 1s ease;
 }
@@ -43,7 +43,49 @@ button {
   margin: 20px;
   height: 50px;
 }
+#galerija {
+  min-width: 400px;
+}
 #opis {
   width: 60%;
   margin: 0 auto;
+}
+.dugmadKontrole {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1060px) {
+  #galerija {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #slikaUGaleriji {
+    height: 40%;
+  }
+}
+@media screen and (max-width: 450px) {
+  #galerija button {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 540px) {
+  td,
+  th {
+    padding: 7px;
+  }
+  table {
+    font-size: small;
+  }
+}
+@media screen and (max-width: 320px) {
+  td,
+  th {
+    padding: 2px;
+  }
+  table {
+    font-size: smaller;
+  }
 }

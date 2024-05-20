@@ -12,9 +12,10 @@ function getContent(){
                     var karta = document.createElement("div");
                     karta.classList.add("row");
                     var tabla = document.createElement("table");
-                    tabla.innerHTML="<tr><th>korisnicko ime</th><th>lozinka</th><th>Ime</th><th>Prezime</th><th>Email</th><th>Datum rodjenja</th><th>Adresa</th><th>Telefon</th<th>Zanimanje</th></tr>"
+                    tabla.innerHTML="<tr><th class='bitna'>korisnicko ime</th><th>lozinka</th><th>Ime</th><th>Prezime</th><th>Email</th><th>Datum rodjenja</th><th>Adresa</th><th>Telefon</th><th>Zanimanje</th></tr>"
                     var red = document.createElement("tr");
                     var celija = document.createElement("td");
+                    celija.classList.add("bitna");
                     celija.innerText = sve[korisnik].korisnickoIme;
                     red.appendChild(celija);
 
@@ -74,7 +75,7 @@ function getContent(){
                 }
             } else {
                 alert('Greska pri ucitavanju korisnika.')
-                window.location.href = "pages/error.html";
+                window.location.href = "error.html";
             }
         }
     }

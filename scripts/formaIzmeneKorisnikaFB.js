@@ -27,9 +27,39 @@ function ucitajKorisnika(){
     request.open('GET', firebaseUrl + '/korisnici.json');
     request.send();
 }
-
+function popuni_poruku2(i, poruka){
+    document.getElementsByClassName("porukica2")[i].innerText = poruka;
+    document.getElementsByClassName("porukica2")[i].style.display = "block";
+}
+function jelTelefon(str){
+    for (let i = 0; i < str.length; i++){
+        if (str[i] < '0' || str[i] > '9'){
+            return false;
+        }
+    }
+    return true;
+ }
+korImena = [];
 document.getElementsByTagName("form")[0].addEventListener("submit", function(e){
-    let inputs = document.getElementsByTagName("input");
+    e.preventDefault();
+   let inputs = document.getElementsByTagName("input");
+   for(ime in korImena){
+      if (korImena[ime] == inputs[0].value && inputs[0].value != ""){
+         popuni_poruku2(0, "Postojeci username");
+         return;
+      }
+   }
+   for (let i = 0; i < 9; i++){
+       if (inputs[i].value == ""){
+         popuni_poruku2(i, "Polje ne sme biti prazno");
+         return;
+       }
+   }
+   if (jelTelefon(inputs[7].value) == false){
+      popuni_poruku2(7, "Neispravan broj telefona");
+      return;
+   }
+
     let korisnik = {
         "korisnickoIme": inputs[0].value,
         "lozinka": inputs[1].value,
@@ -70,3 +100,26 @@ function getParamValue(name) {
     }
 }
 ucitajKorisnika();
+document.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() === 'input') {
+        for(var i = 0; i < 9; i++){
+            document.getElementsByClassName("porukica2")[i].style.display = "none";
+        }
+    }
+ });
+ window.addEventListener('load', function(){
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+       if (this.readyState == 4) {
+          if (this.status == 200) {
+             sve = JSON.parse(request.responseText);
+             for(kor in sve){
+                korImena.push(sve[kor].korisnickoIme);
+             }
+             return false;
+          }
+       }
+    }
+    request.open('GET', firebaseUrl + '/korisnici.json');
+    request.send();
+ });

@@ -9,26 +9,26 @@
     </head>
 
     <body>
-      <nav>
-        <ul>
+      <nav style="justify-content: space-between">
+        <div class="pretragaDiv">
+          <input
+            id="pretragaBox"
+            class="inputPretraga"
+            type="text"
+            placeholder="Pretraga po nazivu"
+          />
+          <img
+            id="pretrazi"
+            class="imgPretraga"
+            src="https://i.imgur.com/drIqvV8.png"
+            alt="searchIcon"
+            onclick="pretrazi()"
+          />
+        </div>
+        <ul class="nav-links">
           <li>
-            <div class="pretragaDiv">
-              <input
-                id="pretragaBox"
-                class="inputPretraga"
-                type="text"
-                placeholder="Pretraga po nazivu"
-              />
-              <img
-                id="pretrazi"
-                class="imgPretraga"
-                src="https://i.imgur.com/drIqvV8.png"
-                alt="searchIcon"
-                onclick="pretrazi()"
-              />
-            </div>
+            <a href="pages/izmenaKorisnika.html">Izmena korisnika</a>
           </li>
-          <li><a href="pages/izmenaKorisnika.html">Izmena korisnika</a></li>
           <li>
             <a href="pages/izmenaOrganizatora.html">Izmena organizatora</a>
           </li>
@@ -45,29 +45,47 @@
             <span id="logOut">Izlogujte se</span>
           </li>
         </ul>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
       </nav>
       <div id="wrapper">
-        <div class="forma" id="registracija" style="height: 44%">
+        <div class="forma" id="registracija" style="height: 47%">
           <h4>Registrujte se svojim podacima</h4>
           <form>
             <label>KorisnickoIme:</label>
-            <input type="text" /><br />
+            <input type="text" name="korisnickoIme" /><br />
+            <label class="porukica"></label>
+
             <label>Lozinka:</label>
-            <input type="text" /><br />
+            <input type="text" minlength="6" /><br />
+            <label class="porukica"></label>
+
             <label>Ime:</label>
             <input type="text" /><br />
+            <label class="porukica"></label>
+
             <label>Prezime:</label>
             <input type="text" /><br />
+            <label class="porukica"></label>
+
             <label>Email:</label>
             <input type="email" /><br />
+            <label class="porukica"></label>
+
             <label>Datum rodjenja:</label>
             <input type="date" /><br />
+            <label class="porukica"></label>
+
             <label>Adresa:</label>
             <input type="text" /><br />
+            <label class="porukica"></label>
+
             <label>Telefon:</label>
-            <input type="text" /><br />
+            <input type="tel" /><br />
+            <label class="porukica"></label>
+
             <label>Zanimanje:</label>
             <input type="text" /><br />
+            <label class="porukica"></label>
 
             <input
               type="submit"
